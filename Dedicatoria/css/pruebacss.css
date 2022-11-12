@@ -1,0 +1,60 @@
+body {
+  background-color: pink; }
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: white; }
+
+p {
+  font-family: Arial, sans-serif;
+  color: black; }
+
+.caja {
+  border: 5px solid white;
+  width: 30%;
+  margin: 0px auto;
+  text-align: center;
+  background-color: green;
+  padding: 10px; }
+  .caja h1 {
+    color: blue; }
+  .caja p {
+    color: aliceblue; }
+  .caja .info {
+    font-size: 20px; }
+    .caja .info .autor {
+      font-size: 15px;
+      color: orange; }
+
+.caja {
+  border: 10px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  text-align: center; }
+
+.listado {
+  border: 10px solid #bf00ff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #0d00ff;
+  text-align: center; }
+
+.alerta, .alerta-2, .alerta-3 {
+  border: 2px solid blue;
+  background-color: rgba(43, 255, 0, 0.571);
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 20px; }
+
+.alerta-2 {
+  color: #9900ff;
+  border-color: black; }
+
+.alerta-3 {
+  color: #1500ff;
+  border-color: red; }
+
+h1 {
+  text-decoration: underline; }

@@ -1,0 +1,106 @@
+//variables
+$fuente-tipica: Arial, sans-serif;
+$color-fondo: pink;
+$color-letra: white;
+$color-secundario: black;
+//uso de variables
+body{
+
+    background-color: $color-fondo;
+}
+
+h1{
+    font-family: $fuente-tipica;
+    color: $color-letra;
+}
+
+p{
+    font-family: $fuente-tipica;
+    color: $color-secundario;
+
+}
+
+
+//anidación
+.caja {
+
+    border: 5px solid white;
+    width: 30%;
+    margin: 0px auto; //alinea las cajas al centro
+    text-align: center;
+    background-color: green;
+    padding: 10px;
+    
+
+    h1 {
+
+        color: blue;
+    }
+
+    p {
+        color:aliceblue
+    }
+
+    .info
+        {
+            font-size: 20px;
+
+            .autor{
+                    font-size: 15px;
+                    color: orange;
+                    
+
+            }
+
+        }
+
+
+  }
+
+  //Mixins / funciones
+
+  @mixin crearbordes($color, $size, $shadow){
+    border: $size solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+    text-align: center
+    
+  }
+
+  .caja{
+    @include crearbordes(white, 10px, black);
+  }
+
+  .listado {
+    @include crearbordes(rgb(191, 0, 255), 10px, rgb(13, 0, 255));
+  }
+
+  //herencia uso de extend
+%alerta-normal{
+    border: 2px solid blue;
+    background-color: rgba(43, 255, 0, 0.571);
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.alerta{
+    @extend %alerta-normal;
+}
+
+.alerta-2{
+@extend %alerta-normal;
+color: rgb(153, 0, 255);
+border-color: rgb(0, 0, 0);
+
+}
+
+.alerta-3{
+@extend %alerta-normal;
+color: rgb(21, 0, 255);
+border-color: red;
+
+}
